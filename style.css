@@ -1,0 +1,402 @@
+/* Reset de base pour une meilleure cohérence entre les navigateurs */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Police moderne et lisible */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Gris très clair */
+    color: #343a40; /* Gris foncé */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: #007bff; /* Bleu principal */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky; /* Fixe en haut lors du défilement */
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #28a745; /* Vert dynamique */
+}
+.logo img
+{
+    position: absolute;
+    width: 15%;
+    left: 0%;
+    top: 5%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    font-size: 1em;
+    color: #343a40;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #e9ecef; /* Gris clair au survol */
+    color: #28a745;
+}
+.active
+{
+    color: green;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+}
+
+h1, h2 {
+    color: #28a745;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #28a745;
+    padding-bottom: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('placeholder-hero.jpg'); /* Remplacez par votre image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    border-bottom: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: rgb(79, 66, 74);
+}
+
+.button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #1e7e34; /* Vert plus foncé au survol */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Categories Section */
+.categories h2 {
+    border-bottom-color: #ffc107; /* Jaune pour contraster */
+    color: #ffc107;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.category-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.category-item img {
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour une meilleure uniformité */
+    object-fit: cover;
+    display: block;
+}
+
+.category-item h3 {
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0;
+    color: #343a40;
+    font-weight: 600;
+}
+
+.category-item a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #007bff;
+    border-top: 1px solid #e9ecef;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.category-item a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Featured Artisans Section */
+.featured-artisans h2 {
+    border-bottom-color: #007bff; /* Bleu pour l'accent */
+    color: #007bff;
+}
+
+.artisan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.artisan-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.artisan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.artisan-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.artisan-card h3 {
+    padding: 15px;
+    margin-bottom: 5px;
+    color: #343a40;
+    font-weight: 600;
+}
+
+.artisan-card p {
+    padding: 0 15px 15px;
+    color: #6c757d; /* Gris plus clair */
+}
+
+.artisan-card a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #007bff;
+    border-top: 1px solid #e9ecef;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.artisan-card a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Artisan Details Page */
+.artisan-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.artisan-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.artisan-info .speciality {
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.artisan-info p strong {
+    font-weight: 700;
+    color: #343a40;
+}
+
+.artisan-products h2 {
+    margin-top: 30px;
+    border-bottom-color: #28a745;
+    color: #28a745;
+}
+
+.artisan-products .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Products List Page */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-card h3 {
+    padding: 15px;
+    margin-bottom: 5px;
+    color: #343a40;
+    font-weight: 600;
+}
+
+.product-card p {
+    padding: 0 15px 10px;
+    color: #6c757d;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #28a745;
+    display: block;
+    padding: 0 15px 15px;
+}
+
+.product-card a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #007bff;
+    border-top: 1px solid #e9ecef;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.product-card a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    bottom: -210%;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries pour la responsivité (ajustements pour les petits écrans) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .artisan-details {
+        grid-template-columns: 1fr;
+    }
+
+    .artisan-info {
+        margin-bottom: 30px;
+    }
+}
